@@ -63,6 +63,7 @@ public class WebSecurityConfig {
                         auth.requestMatchers("/sadvet/auth/**").permitAll()
                                 .requestMatchers("/sadvet/test/**").permitAll()
                                 .requestMatchers("/sadvet/cliente/**").permitAll()
+                                .requestMatchers("/sadvet/mascota/**").permitAll()
                                 .anyRequest().authenticated()
                 );
 

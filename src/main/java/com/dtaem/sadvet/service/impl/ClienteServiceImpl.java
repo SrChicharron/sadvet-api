@@ -26,8 +26,7 @@ public class ClienteServiceImpl implements IClienteService {
     @Override
     public Optional<Cliente> findClienteById(int id) {
         Optional<Cliente> cliente = Optional.of(new Cliente());
-        Long lId= (long) id;
-        cliente=clienteRepository.findById(lId);
+        cliente=clienteRepository.findById(id);
         return cliente;
     }
 
@@ -59,8 +58,7 @@ public class ClienteServiceImpl implements IClienteService {
     public ResponseModelBean deleteCliente(int id) {
         ResponseModelBean responseUpdate = new ResponseModelBean();
         try{
-            Long lId= (long) id;
-            clienteRepository.deleteById(lId);
+            clienteRepository.deleteById(id);
             responseUpdate.setReturnCode(0);
         }catch(Exception e){
             System.out.println(e);
