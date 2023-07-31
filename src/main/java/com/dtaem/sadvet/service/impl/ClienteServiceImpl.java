@@ -61,7 +61,6 @@ public class ClienteServiceImpl implements IClienteService {
             clienteRepository.deleteById(id);
             responseUpdate.setReturnCode(0);
         }catch(Exception e){
-            System.out.println(e);
             responseUpdate.setReturnCode(1);
         }
         return responseUpdate;

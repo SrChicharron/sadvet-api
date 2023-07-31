@@ -9,6 +9,8 @@ public interface IMascotaService{
 
     List<Mascota> getMascotasByIdCliente(int idCliente);
 
+    Mascota getMascotaById(int id);
+
     ResponseModelBean addMascota(Mascota mascota);
 
     ResponseModelBean updateMascota(Mascota mascota);

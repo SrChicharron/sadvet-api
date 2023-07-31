@@ -38,10 +38,6 @@ public class Mascota implements Serializable {
     private String notas;
 
     @Basic(optional = false)
-    @Column(name = "FOTO")
-    private String foto;
-
-    @Basic(optional = false)
     @Column(name = "ID_CLIENTE")
     private int idCliente;
 

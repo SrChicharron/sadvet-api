@@ -26,9 +26,27 @@ public class MascotaController {
         return ResponseEntity.ok(mascotas);
     }
 
+    @GetMapping("/getMascotaById")
+    public ResponseEntity<?> getMascotaById(@RequestParam int id) {
+        Mascota mascota = mascotaService.getMascotaById(id);
+        return ResponseEntity.ok(mascota);
+    }
+
     @PostMapping("/addMascota")
     public ResponseEntity<?> addMascota(@RequestBody Mascota mascota){
         ResponseModelBean response = mascotaService.addMascota(mascota);
+        return ResponseEntity.ok(response);
+    }
+
+    @PostMapping("/updateMascota")
+    public ResponseEntity<?> updateMascota(@RequestBody Mascota mascota){
+        ResponseModelBean response = mascotaService.updateMascota(mascota);
+        return ResponseEntity.ok(response);
+    }
+
+    @PostMapping("/deleteMascota")
+    public ResponseEntity<?> deleteMascota(@RequestBody Mascota mascota){
+        ResponseModelBean response = mascotaService.deleteMascota(mascota.getId());
         return ResponseEntity.ok(response);
     }
 }
