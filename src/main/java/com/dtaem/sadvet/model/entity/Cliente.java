@@ -15,7 +15,6 @@ public class Cliente implements Serializable {
     @Serial
     private static final long serialVersionUID = -8310444991925765315L;
 
-    public static final String TABLE_NAME= "CLIENTE";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
