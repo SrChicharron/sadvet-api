@@ -63,6 +63,13 @@ public class WebSecurityConfig {
                         auth.requestMatchers("/sadvet/auth/**").permitAll()
                                 .requestMatchers("/sadvet/test/**").permitAll()
                                 .requestMatchers("/sadvet/cliente/**").permitAll()
+                                .requestMatchers("/sadvet/mascota/**").permitAll()
+                                .requestMatchers("/sadvet/cita/**").permitAll()
+                                .requestMatchers("/sadvet/citas/**").permitAll()
+                                .requestMatchers("/sadvet/catalogo/**").permitAll()
+                                .requestMatchers("/sadvet/historial/**").permitAll()
+                                .requestMatchers("/sadvet/receta/**").permitAll()
+                                .requestMatchers("/sadvet/producto/**").permitAll()
                                 .anyRequest().authenticated()
                 );
 
